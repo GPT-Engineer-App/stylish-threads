@@ -35,9 +35,9 @@ const Index = () => {
       <Heading mb={4}>Welcome to Our Online Clothing Store</Heading>
       <Grid templateColumns="repeat(4, 1fr)" gap={6}>
         {products.map((product) => (
-          <Box key={product.id} borderWidth="1px" borderRadius="lg" overflow="hidden">
+          <Box key={product.id} borderWidth="1px" borderRadius="lg" overflow="hidden" boxShadow="md" backgroundColor="gray.50">
             <Image src={product.image} alt={product.name} />
-            <Box p="6">
+            <Box p="8">
               <Text fontWeight="bold" textTransform="uppercase" fontSize="lg" mb={2}>
                 {product.name}
               </Text>
@@ -45,13 +45,13 @@ const Index = () => {
                 {product.price}
               </Text>
               <Flex align="center" justify="space-between" mt={3}>
-                <Button leftIcon={<FaShoppingCart />} colorScheme="teal" variant="solid">
+                <Button leftIcon={<FaShoppingCart />} colorScheme="teal" variant="solid" size="sm">
                   Add to Cart
                 </Button>
-                <Button colorScheme="pink" variant="outline">
+                <Button colorScheme="pink" variant="ghost" size="sm">
                   <FaHeart />
                 </Button>
-                <Button colorScheme="blue" variant="outline">
+                <Button colorScheme="blue" variant="ghost" size="sm">
                   <FaSearch />
                 </Button>
               </Flex>

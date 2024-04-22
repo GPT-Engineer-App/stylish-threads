@@ -32,13 +32,13 @@ const Index = () => {
 
   return (
     <Box p={5}>
-      <Heading mb={4}>Welcome to Our Online Clothing Store</Heading>
-      <Grid templateColumns="repeat(2, 1fr)" gap={6}>
+      <Heading mb={4}>Welcome to Kady Style</Heading>
+      <Grid templateColumns="repeat(3, 1fr)" gap={8}>
         {products.map((product) => (
           <Box key={product.id} borderWidth="1px" borderRadius="lg" overflow="hidden" boxShadow="md" backgroundColor="gray.50">
-            <Image src={product.image} alt={product.name} boxSize="300px" objectFit="cover" />
+            <Image src={product.image} alt={product.name} boxSize="250px" objectFit="cover" />
             <Box p="8">
-              <Text fontWeight="bold" fontSize="xl" mb={2}>
+              <Text fontWeight="bold" fontSize="lg" mb={2}>
                 {product.name}
               </Text>
               <Text fontSize="xl" color="gray.800">
